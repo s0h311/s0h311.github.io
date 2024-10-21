@@ -1,0 +1,78 @@
+html {
+  color-scheme: light dark;
+  font-family: monospace;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+main {
+  padding-block: 20px;
+  padding-inline: 20px;
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding-inline: calc((100dvw - 1000px) / 2);
+  }
+}
+
+mark {
+  background: none;
+  color: unset;
+  text-decoration: underline;
+  padding-inline: 0;
+  text-decoration-color: skyblue;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+h1 {
+  font-size: 300%;
+
+  mark {
+    background-color: darksalmon;
+    padding-inline: 10px;
+    text-decoration: none;
+    color: initial;
+  }
+}
+
+h2 {
+  font-size: 200%;
+
+  mark {
+    background-color: skyblue;
+    padding-inline: 10px;
+    text-decoration: none;
+    color: initial;
+  }
+}
+
+h3 {
+  font-size: 150%;
+  text-decoration: underline;
+}
+
+p,
+.section-link {
+  font-size: 150%;
+  text-wrap: pretty;
+  line-height: 1.6em;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
