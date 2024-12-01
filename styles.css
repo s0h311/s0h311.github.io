@@ -80,3 +80,9 @@ header {
 .mb-50 {
   margin-bottom: 50px;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
