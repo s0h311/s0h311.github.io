@@ -55,7 +55,6 @@ h3 {
 }
 
 p,
-li,
 .section-link {
   font-size: 150%;
   text-wrap: pretty;
@@ -86,4 +85,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.experiments-section li {
+  font-size: 150%;
+  text-wrap: pretty;
+  line-height: 1.6em;
 }
