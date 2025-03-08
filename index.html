@@ -3,8 +3,10 @@
 <html lang="en">
   <head>
     <title>Soheil</title>
-    <link rel="stylesheet" href="styles-25-2-7.css" />
-    <script defer src="main-25-2-7.js"></script>
+    <link rel="stylesheet" href="styles-25-3-8.css" />
+    <script type="module" src="main-25-3-8.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +20,12 @@
     <main>
       <header>
         <h1><mark>Welcome.</mark><br /><mark>Nice having you here.</mark></h1>
-        <button id="color-scheme-toggle-btn" aria-label="Toggle color scheme" onclick="toggleTheme()"></button>
+
+        <div class="flex items-center gap-30 h-fit">
+          <div id="unique-visitor-count"></div>
+
+          <button id="color-scheme-toggle-btn" aria-label="Toggle color scheme" onclick="toggleTheme()"></button>
+        </div>
       </header>
 
       <ul class="mb-50">

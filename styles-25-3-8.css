@@ -92,3 +92,19 @@ footer {
   text-wrap: pretty;
   line-height: 1.6em;
 }
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.h-fit {
+  height: fit-content;
+}
