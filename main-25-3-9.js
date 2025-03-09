@@ -100,7 +100,7 @@ function setToggleButtonIcon(colorScheme) {
 }
 
 function updateUniqueVisitorCountText(count) {
-  const countText = `Unique visitor count: ${count}`
+  const countText = `Unique visitors: ${count}`
   const element = document.getElementById('unique-visitor-count')
   element.innerText = countText
 }
