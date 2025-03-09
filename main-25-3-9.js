@@ -10,12 +10,30 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = createClient(SUPABASE_PROJECT_URL, SUPABASE_ANON_KEY)
 
 const htmlElement = document.getElementsByTagName("html")[0];
+const toggleButton = document.getElementById("color-scheme-toggle-btn");
 
 init();
 
 function init() {
   updateUniqueVisitorCountIfNecessary().then(updateUniqueVisitorCountText)
 
+  handleColorScheme()
+
+  toggleButton.onclick = () => toggleTheme()
+}
+
+function toggleTheme() {
+  const currentColorScheme = htmlElement.style.colorScheme;
+
+  if (currentColorScheme === "dark") {
+    setColorScheme("light");
+    return;
+  }
+
+  setColorScheme("dark");
+}
+
+function handleColorScheme() {
   const savedPreference = localStorage.getItem("color-scheme");
 
   const prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
@@ -33,17 +51,6 @@ function init() {
   if (prefersLight) {
     setColorScheme("light");
   }
-}
-
-function toggleTheme() {
-  const currentColorScheme = htmlElement.style.colorScheme;
-
-  if (currentColorScheme === "dark") {
-    setColorScheme("light");
-    return;
-  }
-
-  setColorScheme("dark");
 }
 
 /**
@@ -66,8 +73,6 @@ function savePreference(colorScheme) {
  * @param {ColorScheme} colorScheme
  */
 function setToggleButtonIcon(colorScheme) {
-  const toggleButton = document.getElementById("color-scheme-toggle-btn");
-
   if (colorScheme === "light") {
     toggleButton.innerHTML = `<svg
           id="dark-mode-icon"
