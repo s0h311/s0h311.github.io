@@ -17,6 +17,19 @@ body {
   }
 }
 
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+}
+
 mark {
   background: none;
   color: unset;
@@ -93,18 +106,23 @@ footer {
   line-height: 1.6em;
 }
 
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.gap-30 {
+.unique-visitor-theme-toggle-wrapper {
+  display: grid;
   gap: 30px;
-}
-
-.h-fit {
   height: fit-content;
+  place-items: end;
+
+
+  @media (min-width: 1024px) {
+    grid-auto-flow: column;
+    align-items: center;
+
+    .unique-visitor-count {
+      order: 1;
+    }
+
+    button {
+      order: 2;
+    }
+  }
 }
