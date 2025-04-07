@@ -21,13 +21,16 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
 p,
 ul,
 li {
   margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
 }
 
 mark {
@@ -125,4 +128,8 @@ footer {
       order: 2;
     }
   }
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
